@@ -68,11 +68,12 @@ function check() {
       ) {
         alert("You are logged in " + usrName);
         localStorage.setItem("active", usrName);
-        return location.href("../dashboard/index.html");
+        window.location.href = "../dashboard/index.html";
       }
     }
   } else {
     localStorage.setItem("users", "[]");
+    return alert("Access denied. Invalid username and password.");
   }
-  return alert("Access denied. Valid username and password is required.");
+  
 }
