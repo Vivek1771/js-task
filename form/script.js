@@ -68,7 +68,7 @@ function check() {
       ) {
         alert("You are logged in " + usrName);
         localStorage.setItem("active", usrName);
-        return location.replace("../dashboard/index.html");
+        return location.href("../dashboard/index.html");
       }
     }
   } else {
